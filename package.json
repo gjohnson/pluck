@@ -1,0 +1,16 @@
+{
+  "name": "pluck",
+  "version": "0.0.1",
+  "description": "pluck values from an object path",
+  "keywords": [],
+  "author": "Garrett Johnson <gjohnson@redventures.com>",
+  "license": "MIT",
+  "dependencies": {
+    "to-function": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "main": "index"
+}
