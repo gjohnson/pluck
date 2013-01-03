@@ -9,7 +9,7 @@
 *component*
 
 ```sh
-  $ component install redventures/pluck
+  $ component install gjohnson/pluck
 ```
 
 or
