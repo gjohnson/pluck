@@ -41,6 +41,8 @@ Pluck from simple objects.
 ```javascript
 var pluck = require('pluck');
 
+var firstName = pluck('name.first');
+
 var item = {
   name: {
     first: 'john',
