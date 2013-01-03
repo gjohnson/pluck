@@ -12,5 +12,8 @@
     "mocha": "*",
     "should": "*"
   },
+  "scripts": {
+    "test": "make test"
+  },
   "main": "index"
 }
