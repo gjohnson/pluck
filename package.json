@@ -1,13 +1,11 @@
 {
   "name": "pluck",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "pluck values from an object path",
-  "keywords": [],
+  "keywords": ["pluck"],
   "author": "Garrett Johnson <gjohnson@redventures.com>",
   "license": "MIT",
-  "dependencies": {
-    "to-function": "*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "*",
     "should": "*"

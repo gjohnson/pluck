@@ -2,7 +2,7 @@
 var pluck = require('..');
 var fn = pluck('name.first');
 
-describe('pluck(arr)', function(){
+describe('pluck(path)(array)', function(){
   var arr = [];
 
   arr.push({ name: { first: 'john', last: 'doe' }});
@@ -15,11 +15,36 @@ describe('pluck(arr)', function(){
   });
 });
 
-describe('pluck(object)', function(){
+describe('pluck(path)(object)', function(){
   var obj = { name: { first: 'john', last: 'doe' }};
 
   it('should return the property value', function(){
     var name = fn(obj);
     name.should.equal('john');
+  });
+});
+
+describe('pluck(path, object)', function(){
+  it('should return the property value', function(){
+    var name = pluck('name.first', {
+      name: {
+        first: 'john',
+        last: 'doe'
+      }
+    });
+
+    name.should.equal('john');
+  });
+});
+
+describe('pluck(path, array)', function(){
+  it('should return the property values as an array', function(){
+    var names = pluck('name.first', [
+      { name: { first: 'john', last: 'doe' }},
+      { name: { first: 'jane', last: 'doe' }}
+    ]);
+
+    names.should.include('john');
+    names.should.include('jane');
   });
 });

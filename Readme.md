@@ -36,7 +36,7 @@ var items = [
 var names = firstName(items);
 ```
 
-Pluck from simple objects.
+Pluck from plain objects.
 
 ```javascript
 var pluck = require('pluck');
@@ -53,12 +53,6 @@ var item = {
 var name = firstName(item);
 ```
 
-## API
-
-### pluck(path)
-
-Creates the property lookup function.
-   
 ## License
 
 MIT
