@@ -37,6 +37,22 @@ describe('pluck(path, object)', function(){
   });
 });
 
+describe('pluck(path-with-index, object)', function(){
+  it('should return the property value', function(){
+    var name = pluck('name[1].first', {
+      name: [
+        {},
+        {
+         first: 'john',
+          last: 'doe'
+        }
+      ]
+    });
+
+    name.should.equal('john');
+  });
+});
+
 describe('pluck(path, array)', function(){
   it('should return the property values as an array', function(){
     var names = pluck('name.first', [
