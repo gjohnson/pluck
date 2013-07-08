@@ -53,6 +53,22 @@ describe('pluck(path-with-index, object)', function(){
   });
 });
 
+describe('pluck(invalid-path, object)', function(){
+  it('should return undefined', function(){
+    var obj = {
+      name: [
+        {},
+        {
+          last: 'doe'
+        }
+      ]
+    };
+
+    (pluck('name[2].last', obj) === undefined).should.be.true;
+    (pluck('name[1].first', obj) === undefined).should.be.true;
+  });
+});
+
 describe('pluck(path, array)', function(){
   it('should return the property values as an array', function(){
     var names = pluck('name.first', [
