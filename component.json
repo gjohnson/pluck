@@ -2,7 +2,7 @@
   "name": "pluck",
   "repo": "gjohnson/pluck",
   "description": "pluck property values from arrays or objects",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": ["array", "pluck", "array values"],
   "dependencies": {
     "component/to-function": "*"

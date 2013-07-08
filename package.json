@@ -1,6 +1,6 @@
 {
   "name": "pluck",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "pluck values from an object path",
   "keywords": ["pluck"],
   "author": "Garrett Johnson <gjohnson@redventures.com>",
