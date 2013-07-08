@@ -37,6 +37,38 @@ describe('pluck(path, object)', function(){
   });
 });
 
+describe('pluck(path-with-index, object)', function(){
+  it('should return the property value', function(){
+    var name = pluck('name[1].first', {
+      name: [
+        {},
+        {
+         first: 'john',
+          last: 'doe'
+        }
+      ]
+    });
+
+    name.should.equal('john');
+  });
+});
+
+describe('pluck(invalid-path, object)', function(){
+  it('should return undefined', function(){
+    var obj = {
+      name: [
+        {},
+        {
+          last: 'doe'
+        }
+      ]
+    };
+
+    (pluck('name[2].last', obj) === undefined).should.be.true;
+    (pluck('name[1].first', obj) === undefined).should.be.true;
+  });
+});
+
 describe('pluck(path, array)', function(){
   it('should return the property values as an array', function(){
     var names = pluck('name.first', [
