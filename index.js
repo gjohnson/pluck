@@ -55,12 +55,15 @@ function select(path, object){
 
 function get(path, object){
   if (!(path && object)) return;
-  var parts = path.split('.');
+  var parts = path.split(/[.\[\]]/);
   var len = parts.length;
   var value = object;
+  var part;
 
   for (var i = 0; i < len; i++) {
-    value = value[parts[i]];
+    part = parts[i];
+    if (!part) continue;
+    value = value[part];
     if (value == null) break;
   }
 

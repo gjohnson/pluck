@@ -53,6 +53,25 @@ var item = {
 var name = firstName(item);
 ```
 
+Pluck using index expressions.
+
+```javascript
+var pluck = require('pluck');
+
+var firstName = pluck('name[1].first');
+var item = {
+  name: [
+    {},
+    {
+      first: 'john',
+      last: 'doe'
+    }
+  ]
+};
+
+var name = firstName(item);
+```
+
 ## License
 
 MIT
